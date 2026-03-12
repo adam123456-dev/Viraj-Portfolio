@@ -1,7 +1,7 @@
 /* 
     File:index.css
-    Author: Ed Park
-    Copyright: 2023 - Ed Park https://edpark.space
+    Author: Viraj
+    Copyright: 2023 - Viraj https://edpark.space
     Version: 1.0
 */
 
@@ -100,326 +100,198 @@
 }
 
 @layer base {
-    :root, 
+    /* Clean, professional palette: neutral grays for UI, restrained blue for accents */
+    :root,
     dialog::backdrop {
-        --color-black: 0deg 0% 100%;
-        --color-white: 0deg 0% 0%;
+        --color-black: 0deg 0% 0%;
+        --color-white: 0deg 0% 100%;
 
-        --color-primBlue-1050: 211deg 100% 95%;
-        --color-primBlue-1000: 216deg 100% 93%;
-        --color-primBlue-900: 216deg 100% 85%;
-        --color-primBlue-800: 219deg 95% 76%;
-        --color-primBlue-700: 222deg 81% 65%;
-        --color-primBlue-600: 224deg 69% 54%;
-        --color-primBlue-500: 223deg 71% 47%;
-        --color-primBlue-400: 228deg 74% 43%;
-        --color-primBlue-300: 230deg 80% 38%;
-        --color-primBlue-200: 232deg 86% 32%;
-        --color-primBlue-100: 234deg 90% 25%;
-        --color-primBlue-50: 236deg 84% 7%;
+        /* Neutral gray (0% saturation) – background and text */
+        --color-neutGray-1050: 0deg 0% 98%;
+        --color-neutGray-1000: 0deg 0% 95%;
+        --color-neutGray-900: 0deg 0% 90%;
+        --color-neutGray-800: 0deg 0% 80%;
+        --color-neutGray-700: 0deg 0% 60%;
+        --color-neutGray-600: 0deg 0% 45%;
+        --color-neutGray-500: 0deg 0% 35%;
+        --color-neutGray-400: 0deg 0% 25%;
+        --color-neutGray-300: 0deg 0% 18%;
+        --color-neutGray-200: 0deg 0% 12%;
+        --color-neutGray-100: 0deg 0% 8%;
 
-        --color-neutGray-1050: 210deg 36% 96%;
-        --color-neutGray-1000: 212deg 33% 89%;
-        --color-neutGray-900: 210deg 31% 80%;
-        --color-neutGray-800: 211deg 27% 70%;
-        --color-neutGray-700: 209deg 23% 60%;
-        --color-neutGray-600: 210deg 22% 49%;
-        --color-neutGray-500: 209deg 28% 39%;
-        --color-neutGray-400: 209deg 34% 30%;
-        --color-neutGray-300: 211deg 39% 23%;
-        --color-neutGray-200: 209deg 61% 16%;
-        --color-neutGray-100: 210deg 64% 4%;
+        /* Primary blue – accent only (links, buttons, focus) */
+        --color-primBlue-1050: 0deg 0% 98%;
+        --color-primBlue-1000: 220deg 14% 96%;
+        --color-primBlue-900: 220deg 20% 90%;
+        --color-primBlue-800: 220deg 25% 78%;
+        --color-primBlue-700: 220deg 35% 62%;
+        --color-primBlue-600: 220deg 45% 48%;
+        --color-primBlue-500: 220deg 55% 42%;
+        --color-primBlue-400: 220deg 60% 38%;
+        --color-primBlue-300: 220deg 55% 32%;
+        --color-primBlue-200: 220deg 50% 25%;
+        --color-primBlue-100: 220deg 45% 18%;
+        --color-primBlue-50: 220deg 40% 12%;
 
-        --color-suppBlue-1000: 195deg 100% 95%;
-        --color-suppBlue-900: 195deg 100% 85%;
-        --color-suppBlue-800: 195deg 97% 75%;
-        --color-suppBlue-700: 196deg 94% 67%;
-        --color-suppBlue-600: 197deg 92% 61%;
-        --color-suppBlue-500: 199deg 84% 55%;
-        --color-suppBlue-400: 201deg 79% 46%;
-        --color-suppBlue-300: 202deg 83% 41%;
-        --color-suppBlue-200: 203deg 87% 34%;
-        --color-suppBlue-100: 204deg 96% 27%;
+        /* Supplemental – focus, status, etc. (restrained) */
+        --color-suppBlue-1000: 200deg 40% 96%;
+        --color-suppBlue-900: 200deg 45% 88%;
+        --color-suppBlue-800: 200deg 50% 75%;
+        --color-suppBlue-700: 200deg 55% 62%;
+        --color-suppBlue-600: 200deg 55% 50%;
+        --color-suppBlue-500: 200deg 60% 42%;
+        --color-suppBlue-400: 200deg 65% 35%;
+        --color-suppBlue-300: 200deg 65% 28%;
+        --color-suppBlue-200: 200deg 70% 22%;
+        --color-suppBlue-100: 200deg 75% 16%;
 
-        --color-suppRed-1000: 0deg 100% 95%;
-        --color-suppRed-900: 0deg 100% 87%;
-        --color-suppRed-800: 0deg 100% 80%;
-        --color-suppRed-700: 0deg 91% 69%;
-        --color-suppRed-600: 0deg 83% 62%;
-        --color-suppRed-500: 356deg 75% 53%;
-        --color-suppRed-400: 354deg 85% 44%;
-        --color-suppRed-300: 352deg 90% 35%;
-        --color-suppRed-200: 350deg 94% 28%;
-        --color-suppRed-100: 348deg 94% 20%;
+        --color-suppRed-1000: 0deg 50% 98%;
+        --color-suppRed-900: 0deg 55% 92%;
+        --color-suppRed-800: 0deg 60% 85%;
+        --color-suppRed-700: 0deg 65% 72%;
+        --color-suppRed-600: 0deg 70% 58%;
+        --color-suppRed-500: 0deg 70% 48%;
+        --color-suppRed-400: 0deg 72% 40%;
+        --color-suppRed-300: 0deg 72% 32%;
+        --color-suppRed-200: 0deg 75% 24%;
+        --color-suppRed-100: 0deg 78% 18%;
 
-        --color-suppYellow-1000: 49deg 100% 96%;
-        --color-suppYellow-900: 48deg 100% 88%;
-        --color-suppYellow-800: 48deg 95% 76%;
-        --color-suppYellow-700: 48deg 94% 68%;
-        --color-suppYellow-600: 44deg 92% 63%;
-        --color-suppYellow-500: 42deg 87% 55%;
-        --color-suppYellow-400: 36deg 77% 49%;
-        --color-suppYellow-300: 29deg 80% 44%;
-        --color-suppYellow-200: 22deg 82% 39%;
-        --color-suppYellow-100: 15deg 86% 30%;
+        --color-suppYellow-1000: 45deg 60% 97%;
+        --color-suppYellow-900: 45deg 65% 90%;
+        --color-suppYellow-800: 45deg 70% 78%;
+        --color-suppYellow-700: 45deg 72% 65%;
+        --color-suppYellow-600: 45deg 75% 52%;
+        --color-suppYellow-500: 45deg 78% 45%;
+        --color-suppYellow-400: 42deg 80% 38%;
+        --color-suppYellow-300: 40deg 82% 30%;
+        --color-suppYellow-200: 38deg 85% 24%;
+        --color-suppYellow-100: 35deg 88% 18%;
 
-        --color-suppGreen-1000: 152deg 68% 96%;
-        --color-suppGreen-900: 154deg 75% 87%;
-        --color-suppGreen-800: 156deg 73% 74%;
-        --color-suppGreen-700: 158deg 58% 62%;
-        --color-suppGreen-600: 160deg 51% 49%;
-        --color-suppGreen-500: 162deg 63% 41%;
-        --color-suppGreen-400: 164deg 71% 34%;
-        --color-suppGreen-300: 166deg 72% 28%;
-        --color-suppGreen-200: 168deg 80% 23%;
-        --color-suppGreen-100: 170deg 97% 15%;
+        --color-suppGreen-1000: 150deg 35% 96%;
+        --color-suppGreen-900: 150deg 40% 88%;
+        --color-suppGreen-800: 150deg 45% 72%;
+        --color-suppGreen-700: 150deg 50% 55%;
+        --color-suppGreen-600: 150deg 55% 42%;
+        --color-suppGreen-500: 152deg 55% 36%;
+        --color-suppGreen-400: 154deg 58% 30%;
+        --color-suppGreen-300: 154deg 60% 24%;
+        --color-suppGreen-200: 156deg 62% 18%;
+        --color-suppGreen-100: 158deg 65% 14%;
     }
 
     :root.dark,
     :root.dark ~ dialog::backdrop {
-        --color-black: 0deg 0% 0%;
-        --color-white: 0deg 0% 100%;
+        --color-black: 0deg 0% 100%;
+        --color-white: 0deg 0% 0%;
 
-        --color-primBlue-50: 211deg 100% 95%;
-        --color-primBlue-100: 216deg 100% 93%;
-        --color-primBlue-200: 216deg 100% 85%;
-        --color-primBlue-300: 219deg 95% 76%;
-        --color-primBlue-400: 222deg 81% 65%;
-        --color-primBlue-500: 224deg 69% 54%;
-        --color-primBlue-600: 223deg 71% 47%;
-        --color-primBlue-700: 228deg 74% 43%;
-        --color-primBlue-800: 230deg 80% 38%;
-        --color-primBlue-900: 232deg 86% 32%;
-        --color-primBlue-1000: 234deg 90% 25%;
-        --color-primBlue-1050: 236deg 84% 7%;
+        --color-neutGray-100: 0deg 0% 98%;
+        --color-neutGray-200: 0deg 0% 95%;
+        --color-neutGray-300: 0deg 0% 88%;
+        --color-neutGray-400: 0deg 0% 75%;
+        --color-neutGray-500: 0deg 0% 60%;
+        --color-neutGray-600: 0deg 0% 48%;
+        --color-neutGray-700: 0deg 0% 38%;
+        --color-neutGray-800: 0deg 0% 25%;
+        --color-neutGray-900: 0deg 0% 15%;
+        --color-neutGray-1000: 0deg 0% 10%;
+        --color-neutGray-1050: 0deg 0% 6%;
 
-        --color-neutGray-100: 210deg 36% 96%;
-        --color-neutGray-200: 212deg 33% 89%;
-        --color-neutGray-300: 210deg 31% 80%;
-        --color-neutGray-400: 211deg 27% 70%;
-        --color-neutGray-500: 209deg 23% 60%;
-        --color-neutGray-600: 210deg 22% 49%;
-        --color-neutGray-700: 209deg 28% 39%;
-        --color-neutGray-800: 209deg 34% 30%;
-        --color-neutGray-900: 211deg 39% 23%;
-        --color-neutGray-1000: 209deg 61% 16%;
-        --color-neutGray-1050: 210deg 64% 4%;
+        --color-primBlue-50: 220deg 25% 92%;
+        --color-primBlue-100: 220deg 30% 85%;
+        --color-primBlue-200: 220deg 35% 78%;
+        --color-primBlue-300: 220deg 40% 68%;
+        --color-primBlue-400: 220deg 45% 58%;
+        --color-primBlue-500: 220deg 50% 50%;
+        --color-primBlue-600: 220deg 55% 48%;
+        --color-primBlue-700: 220deg 55% 55%;
+        --color-primBlue-800: 220deg 45% 70%;
+        --color-primBlue-900: 220deg 35% 82%;
+        --color-primBlue-1000: 220deg 25% 92%;
+        --color-primBlue-1050: 220deg 15% 96%;
 
-        --color-suppBlue-100: 195deg 100% 95%;
-        --color-suppBlue-200: 195deg 100% 85%;
-        --color-suppBlue-300: 195deg 97% 75%;
-        --color-suppBlue-400: 196deg 94% 67%;
-        --color-suppBlue-500: 197deg 92% 61%;
-        --color-suppBlue-600: 199deg 84% 55%;
-        --color-suppBlue-700: 201deg 79% 46%;
-        --color-suppBlue-800: 202deg 83% 41%;
-        --color-suppBlue-900: 203deg 87% 34%;
-        --color-suppBlue-1000: 204deg 96% 27%;
+        --color-suppBlue-100: 200deg 50% 92%;
+        --color-suppBlue-200: 200deg 55% 82%;
+        --color-suppBlue-300: 200deg 55% 70%;
+        --color-suppBlue-400: 200deg 55% 58%;
+        --color-suppBlue-500: 200deg 60% 50%;
+        --color-suppBlue-600: 200deg 65% 48%;
+        --color-suppBlue-700: 200deg 60% 58%;
+        --color-suppBlue-800: 200deg 50% 70%;
+        --color-suppBlue-900: 200deg 40% 82%;
+        --color-suppBlue-1000: 200deg 35% 92%;
 
-        --color-suppRed-100: 0deg 100% 95%;
-        --color-suppRed-200: 0deg 100% 87%;
-        --color-suppRed-300: 0deg 100% 80%;
-        --color-suppRed-400: 0deg 91% 69%;
-        --color-suppRed-500: 0deg 83% 62%;
-        --color-suppRed-600: 356deg 75% 53%;
-        --color-suppRed-700: 354deg 85% 44%;
-        --color-suppRed-800: 352deg 90% 35%;
-        --color-suppRed-900: 350deg 94% 28%;
-        --color-suppRed-1000: 348deg 94% 20%;
+        --color-suppRed-100: 0deg 55% 92%;
+        --color-suppRed-200: 0deg 60% 85%;
+        --color-suppRed-300: 0deg 65% 72%;
+        --color-suppRed-400: 0deg 68% 58%;
+        --color-suppRed-500: 0deg 70% 50%;
+        --color-suppRed-600: 0deg 72% 48%;
+        --color-suppRed-700: 0deg 70% 55%;
+        --color-suppRed-800: 0deg 65% 65%;
+        --color-suppRed-900: 0deg 55% 78%;
+        --color-suppRed-1000: 0deg 45% 90%;
 
-        --color-suppYellow-100: 49deg 100% 96%;
-        --color-suppYellow-200: 48deg 100% 88%;
-        --color-suppYellow-300: 48deg 95% 76%;
-        --color-suppYellow-400: 48deg 94% 68%;
-        --color-suppYellow-500: 44deg 92% 63%;
-        --color-suppYellow-600: 42deg 87% 55%;
-        --color-suppYellow-700: 36deg 77% 49%;
-        --color-suppYellow-800: 29deg 80% 44%;
-        --color-suppYellow-900: 22deg 82% 39%;
-        --color-suppYellow-1000: 15deg 86% 30%;
+        --color-suppYellow-100: 45deg 60% 92%;
+        --color-suppYellow-200: 45deg 65% 82%;
+        --color-suppYellow-300: 45deg 70% 70%;
+        --color-suppYellow-400: 45deg 72% 58%;
+        --color-suppYellow-500: 45deg 75% 50%;
+        --color-suppYellow-600: 45deg 78% 48%;
+        --color-suppYellow-700: 45deg 75% 55%;
+        --color-suppYellow-800: 45deg 68% 68%;
+        --color-suppYellow-900: 45deg 55% 80%;
+        --color-suppYellow-1000: 45deg 45% 90%;
 
-        --color-suppGreen-100: 152deg 68% 96%;
-        --color-suppGreen-200: 154deg 75% 87%;
-        --color-suppGreen-300: 156deg 73% 74%;
-        --color-suppGreen-400: 158deg 58% 62%;
-        --color-suppGreen-500: 160deg 51% 49%;
-        --color-suppGreen-600: 162deg 63% 41%;
-        --color-suppGreen-700: 164deg 71% 34%;
-        --color-suppGreen-800: 166deg 72% 28%;
-        --color-suppGreen-900: 168deg 80% 23%;
-        --color-suppGreen-1000: 170deg 97% 15%;
+        --color-suppGreen-100: 150deg 40% 90%;
+        --color-suppGreen-200: 150deg 45% 78%;
+        --color-suppGreen-300: 150deg 50% 62%;
+        --color-suppGreen-400: 150deg 55% 48%;
+        --color-suppGreen-500: 152deg 55% 42%;
+        --color-suppGreen-600: 154deg 58% 45%;
+        --color-suppGreen-700: 154deg 55% 52%;
+        --color-suppGreen-800: 152deg 48% 62%;
+        --color-suppGreen-900: 150deg 40% 75%;
+        --color-suppGreen-1000: 148deg 35% 88%;
     }
 
     html {
         font-size: 62.5%;
-        scrollbar-width: auto;
-        scrollbar-color: hsl(var(--color-neutGray-200)) hsl(var(--color-primBlue-700));
+        scrollbar-width: thin;
+        scrollbar-color: hsl(var(--color-neutGray-600)) hsl(var(--color-neutGray-1000));
+    }
+
+    html.dark {
+        scrollbar-color: hsl(var(--color-neutGray-600)) hsl(var(--color-neutGray-900));
     }
 
     ::-webkit-scrollbar {
-        width: 16px;
-        height: 16px;
+        width: 10px;
+        height: 10px;
     }
-  
+
     ::-webkit-scrollbar-thumb {
-        background: linear-gradient(107deg, hsl(var(--color-neutGray-200) / 0.7) 0%, hsl(var(--color-neutGray-200) / 0.5) 40%, hsl(var(--color-neutGray-200) / 0.7) 100%);
+        background: hsl(var(--color-neutGray-600));
+        border-radius: 4px;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        background: linear-gradient(107deg, hsl(var(--color-neutGray-200)) 0%, hsl(var(--color-neutGray-200) / 0.7) 40%, hsl(var(--color-neutGray-200)) 100%);
+        background: hsl(var(--color-neutGray-500));
     }
-  
+
     ::-webkit-scrollbar-track {
-        background: linear-gradient(107deg, hsl(var(--color-suppBlue-400) / 0.7) 0%, hsl(var(--color-suppBlue-400) / 0.5) 40%, hsl(var(--color-suppBlue-400) / 0.7) 100%);
+        background: hsl(var(--color-neutGray-1000));
     }
 
     html.dark ::-webkit-scrollbar-track {
-        background: linear-gradient(107deg, hsl(var(--color-suppBlue-1000) / 0.7) 0%, hsl(var(--color-suppBlue-1000) / 0.5) 40%, hsl(var(--color-suppBlue-1000) / 0.7) 100%);
-    }
-  
-    ::-webkit-scrollbar-track:hover {
-        background: linear-gradient(107deg, hsl(var(--color-suppBlue-700)) 0%, hsl(var(--color-suppBlue-700) / 0.7) 40%, hsl(var(--color-suppBlue-700)) 100%);
-    }
-
-    html.dark ::-webkit-scrollbar-track:hover {
-        background: linear-gradient(107deg, hsl(var(--color-suppBlue-1000)) 0%, hsl(var(--color-suppBlue-1000) / 0.7) 40%, hsl(var(--color-suppBlue-1000)) 100%);
-    }
-
-    ::-webkit-scrollbar-button:single-button {
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 12px;
-        height: 28px;
-        width: 16px;
-        background-color: hsl(var(--color-neutGray-200) / 1);
-    }
-
-    ::-webkit-scrollbar-button:single-button:hover {
-        background-color: hsl(var(--color-neutGray-800) / 1);
-    }
-
-    /* Up */
-    ::-webkit-scrollbar-button:single-button:vertical:decrement {
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 12px;
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='50' fill='white'><polygon points='50,00 0,50 100,50'/></svg>");
-    }
-
-    html.dark ::-webkit-scrollbar-button:single-button:vertical:decrement {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='50' fill='hsl(228, 74%, 43%)'><polygon points='50,00 0,50 100,50'/></svg>");
-    }
-    
-    ::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='50' fill='hsl(228, 74%, 43%)'><polygon points='50,00 0,50 100,50'/></svg>");
-    }
-
-    html.dark ::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='50' fill='hsl(195, 97%, 75%)'><polygon points='50,00 0,50 100,50'/></svg>");
-    }
-
-    ::-webkit-scrollbar-button:single-button:vertical:decrement:active {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='50' fill='hsl(234, 90%, 25%)'><polygon points='50,00 0,50 100,50'/></svg>");
-    }
-
-    html.dark ::-webkit-scrollbar-button:single-button:vertical:decrement:active {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='50' fill='white'><polygon points='50,00 0,50 100,50'/></svg>");
-    }
-
-    /* Down */
-    ::-webkit-scrollbar-button:single-button:vertical:increment {
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 12px;
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='50' fill='white'><polygon points='0,0 100,0 50,50'/></svg>");
-    }
-
-    html.dark ::-webkit-scrollbar-button:single-button:vertical:increment {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='50' fill='hsl(228, 74%, 43%)'><polygon points='0,0 100,0 50,50'/></svg>");
-    }
-    
-    ::-webkit-scrollbar-button:single-button:vertical:increment:hover {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='50' fill='hsl(228, 74%, 43%)'><polygon points='0,0 100,0 50,50'/></svg>");
-    }
-
-    html.dark ::-webkit-scrollbar-button:single-button:vertical:increment:hover {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='50' fill='hsl(195, 97%, 75%)'><polygon points='0,0 100,0 50,50'/></svg>");
-    }
-
-    ::-webkit-scrollbar-button:single-button:vertical:increment:active {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='50' fill='hsl(234, 90%, 25%)'><polygon points='0,0 100,0 50,50'/></svg>");
-    }
-
-    html.dark ::-webkit-scrollbar-button:single-button:vertical:increment:active {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='50' fill='white'><polygon points='0,0 100,0 50,50'/></svg>");
-    }
-
-    /* Left */
-    ::-webkit-scrollbar-button:single-button:horizontal:decrement {
-        height: 16px;
-        width: 28px;
-        background-repeat: no-repeat;
-        background-position: 60%;
-        background-size: 12px;
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='white'><polygon points='0,50 50,100 50,0'/></svg>");
-    }
-
-    html.dark ::-webkit-scrollbar-button:single-button:horizontal:decrement {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='hsl(228, 74%, 43%)'><polygon points='0,50 50,100 50,0'/></svg>");
-    }
-
-    ::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='hsl(228, 74%, 43%)'><polygon points='0,50 50,100 50,0'/></svg>");
-    }
-
-    html.dark ::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='hsl(195, 97%, 75%)'><polygon points='0,50 50,100 50,0'/></svg>");
-    }
-
-    ::-webkit-scrollbar-button:single-button:horizontal:decrement:active {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='hsl(234, 90%, 25%)'><polygon points='0,50 50,100 50,0'/></svg>");
-    }
-
-    html.dark ::-webkit-scrollbar-button:single-button:horizontal:decrement:active {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='white'><polygon points='0,50 50,100 50,0'/></svg>");
-    }
-
-    /* Right */
-    ::-webkit-scrollbar-button:single-button:horizontal:increment {
-        height: 16px;
-        width: 28px;
-        background-repeat: no-repeat;
-        background-position: 75%;
-        background-size: 12px;
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='white'><polygon points='0,0 0,100 50,50'/></svg>");
-    }
-
-    html.dark ::-webkit-scrollbar-button:single-button:horizontal:increment {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='hsl(228, 74%, 43%)'><polygon points='0,0 0,100 50,50'/></svg>");
-    }
-
-    ::-webkit-scrollbar-button:single-button:horizontal:increment:hover {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='hsl(228, 74%, 43%)'><polygon points='0,0 0,100 50,50'/></svg>");
-    }
-
-    html.dark ::-webkit-scrollbar-button:single-button:horizontal:increment:hover {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='hsl(195, 97%, 75%)'><polygon points='0,0 0,100 50,50'/></svg>");
-    }
-
-    ::-webkit-scrollbar-button:single-button:horizontal:increment:active {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='hsl(234, 90%, 25%)'><polygon points='0,0 0,100 50,50'/></svg>");
-    }
-
-    html.dark ::-webkit-scrollbar-button:single-button:horizontal:increment:active {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='white'><polygon points='0,0 0,100 50,50'/></svg>");
+        background: hsl(var(--color-neutGray-900));
     }
 
     body {
-        @apply relative text-0 font-body bg-primBlue-1050 text-primBlue-200;
+        @apply relative text-0 font-body bg-neutGray-1050 text-neutGray-100;
     }
 
     #main-mobile-menu {
-        @apply text-0 font-body text-primBlue-200;
+        @apply text-0 font-body text-neutGray-100;
     }
 
     body *,
@@ -488,22 +360,29 @@
     }
 
     .inline-link {
-        color: hsl(var(--color-neutGray-100) / 1);
-        background-image: -o-linear-gradient(343deg, hsl(var(--color-primBlue-400)) 0%, hsl(var(--color-primBlue-400) / 0.75) 40%, hsl(var(--color-primBlue-400)) 100%);
-        background-image: linear-gradient(107deg, hsl(var(--color-primBlue-400)) 0%, hsl(var(--color-primBlue-400) / 0.75) 40%, hsl(var(--color-primBlue-400)) 100%);
-        background-position: 0% 100%;
-        background-repeat: no-repeat;
-        background-size: 100% 3px;
-        -webkit-transition: background-size .3s;
-        -o-transition: background-size .3s;
-        transition: background-size .3s;
+        color: hsl(var(--color-primBlue-600));
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
+        text-decoration-color: hsl(var(--color-primBlue-500) / 0.6);
+        -webkit-transition: color 0.2s ease, text-decoration-color 0.2s ease;
+        transition: color 0.2s ease, text-decoration-color 0.2s ease;
     }
 
     .inline-link:hover,
     .inline-link:focus {
-        color: hsl(var(--color-neutGray-1050) / 1);
-        background: -o-linear-gradient(343deg, hsl(var(--color-primBlue-100)) 0%, hsl(var(--color-primBlue-100) / 0.75) 40%, hsl(var(--color-primBlue-100)) 100%);
-        background: linear-gradient(107deg, hsl(var(--color-primBlue-100)) 0%, hsl(var(--color-primBlue-100) / 0.75) 40%, hsl(var(--color-primBlue-100)) 100%);
+        color: hsl(var(--color-primBlue-500));
+        text-decoration-color: hsl(var(--color-primBlue-500));
+    }
+
+    html.dark .inline-link {
+        color: hsl(var(--color-primBlue-400));
+        text-decoration-color: hsl(var(--color-primBlue-500) / 0.7);
+    }
+
+    html.dark .inline-link:hover,
+    html.dark .inline-link:focus {
+        color: hsl(var(--color-primBlue-300));
+        text-decoration-color: hsl(var(--color-primBlue-400));
     }
 
     nav li a {
@@ -512,56 +391,28 @@
 
     nav li a:before {
         content: "";
-        display: block;
         position: absolute;
-        bottom: -0.1em;
+        bottom: 0.1em;
         left: 0;
         right: 100%;
         height: 2px;
-        background: transparent;
-        -webkit-transition: right 0.2s linear;
-        -o-transition: right 0.2s linear;
-        transition: right 0.2s linear;
+        background: hsl(var(--color-primBlue-500));
+        -webkit-transition: right 0.2s ease;
+        transition: right 0.2s ease;
         z-index: -1;
     }
 
     nav li a:after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: -0.1em;
-        left: 100%;
-        right: 0;
-        height: 2px;
-        background: transparent;
-        -webkit-transition: left 0.2s linear;
-        -o-transition: left 0.2s linear;
-        transition: left 0.2s linear;
-        z-index: -1;
+        content: none;
     }
-    
+
     nav li a:hover:before,
     nav li a:focus:before {
         right: 0;
-        background: -o-linear-gradient(343deg, hsl(var(--color-primBlue-100)) 0%, hsl(var(--color-primBlue-100) / 0.75) 40%, hsl(var(--color-primBlue-100)) 100%);
-        background: linear-gradient(107deg, hsl(var(--color-primBlue-100)) 0%, hsl(var(--color-primBlue-100) / 0.75) 40%, hsl(var(--color-primBlue-100)) 100%);
-        -webkit-box-shadow: 0 0 3px 3px hsl(var(--color-primBlue-100) / 0.4);
-                box-shadow: 0 0 3px 3px hsl(var(--color-primBlue-100) / 0.4);
     }
 
-    nav li a:hover:after,
-    nav li a:focus:after {
-        left: 0;
-        background: -o-linear-gradient(343deg, hsl(var(--color-primBlue-100)) 0%, hsl(var(--color-primBlue-100) / 0.75) 40%, hsl(var(--color-primBlue-100)) 100%);
-        background: linear-gradient(107deg, hsl(var(--color-primBlue-100)) 0%, hsl(var(--color-primBlue-100) / 0.75) 40%, hsl(var(--color-primBlue-100)) 100%);
-        -webkit-box-shadow: 0 0 3px 3px hsl(var(--color-primBlue-100) / 0.4);
-                box-shadow: 0 0 3px 3px hsl(var(--color-primBlue-100) / 0.4);
-    }
-
-    nav li a:active:before,
-    nav li a:active:after {
-        -webkit-box-shadow: 0 0 5px 5px hsl(var(--color-primBlue-100) / 0.6);
-                box-shadow: 0 0 5px 5px hsl(var(--color-primBlue-100) / 0.6);
+    html.dark nav li a:before {
+        background: hsl(var(--color-primBlue-400));
     }
 
     .ascending-squares {
@@ -572,27 +423,21 @@
         z-index: -99;
     }
 
-    .ascending-squares div{
+    .ascending-squares div {
         position: absolute;
         width: 20px;
         height: 20px;
-        border-radius: 5px;
-        border: 2px solid hsl(var(--color-suppBlue-100) / 0.15); 
-        background: hsl(var(--color-suppBlue-100) / 0.1);
-        -webkit-box-shadow: 0 8px 32px 0 hsl(var(--color-primBlue-50) / 0.12);
-                box-shadow: 0 8px 32px 0 hsl(var(--color-primBlue-50) / 0.12);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        border-radius: 4px;
+        border: 1px solid hsl(var(--color-neutGray-700) / 0.2);
+        background: hsl(var(--color-neutGray-600) / 0.06);
         -webkit-animation: square-float 18s linear infinite;
-            animation: square-float 18s linear infinite;
-        bottom:-200px;
+        animation: square-float 18s linear infinite;
+        bottom: -200px;
     }
 
-    :root.dark .ascending-squares div{
-        border: 2px solid hsl(var(--color-suppBlue-1000) / 0.1); 
-        background: hsl(var(--color-suppBlue-1000) / 0.07);
-        -webkit-box-shadow: 0 8px 32px 0 hsl(var(--color-primBlue-1050) / 0.1);
-                box-shadow: 0 8px 32px 0 hsl(var(--color-primBlue-1050) / 0.1);
+    :root.dark .ascending-squares div {
+        border: 1px solid hsl(var(--color-neutGray-500) / 0.15);
+        background: hsl(var(--color-neutGray-400) / 0.05);
     }
 
     .ascending-squares div:nth-child(1){
@@ -704,16 +549,14 @@
     }
 
     @media (prefers-reduced-motion) {
-        .ascending-squares div{
+        .ascending-squares div {
             -webkit-animation: none;
-                    animation: none;
+            animation: none;
         }
 
-        .inline-link:before,
-        nav li a:before,
-        nav li a:after {
+        .inline-link,
+        nav li a:before {
             -webkit-transition: none;
-            -o-transition: none;
             transition: none;
         }
     }
@@ -721,113 +564,88 @@
 
 @layer components {
     .glassy-icon {
-        position: relative;
         font-family: theme('fontFamily.heading');
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        background: -o-linear-gradient(343deg, hsl(var(--color-primBlue-200) / 0.07) 0%, hsl(var(--color-primBlue-200) / 0.15) 40%, hsl(var(--color-primBlue-200) / 0.07) 100%);
-        background: linear-gradient(107deg, hsl(var(--color-primBlue-200) / 0.07) 0%, hsl(var(--color-primBlue-200) / 0.15) 40%, hsl(var(--color-primBlue-200) / 0.07) 100%);
+        justify-content: center;
+        align-items: center;
         padding: theme('spacing.4');
-        border-width: theme('spacing.2');
-        border-style: solid;
-        border-image-source: linear-gradient(107deg, hsl(var(--color-primBlue-100)) 0%, hsl(var(--color-primBlue-100) / 0.8) 40%, hsl(var(--color-primBlue-100) / 0.8) 100%);
-        border-image-slice: 1;
-        overflow: hidden;
-        -webkit-backdrop-filter: blur(5px);
-                backdrop-filter: blur(5px);
-        -webkit-font-smoothing: subpixel-antialiased;
+        background: hsl(var(--color-neutGray-1000));
+        border: 1px solid hsl(var(--color-neutGray-700));
+        color: hsl(var(--color-neutGray-100));
         text-align: center;
-    }
-    
-    :root.dark .glassy-icon {
-        border-image-source: linear-gradient(107deg, hsl(var(--color-primBlue-100)) 0%, hsl(var(--color-primBlue-100) / 0.75) 40%, hsl(var(--color-primBlue-100) / 0.25) 100%);
-    }
-
-    .glassy-icon:before {
-        content: "";
-        position: absolute;
-        display: block;
-        width: 50%;
-        height: 100%;
-        background: hsl(var(--color-primBlue-400) / 0.4);
-        -webkit-transition: 500ms;
-        -o-transition: 500ms;
-        transition: 500ms;
-        -webkit-transform: skewX(45deg) translateX(250%);
-            -ms-transform: skewX(45deg) translateX(250%);
-                transform: skewX(45deg) translateX(250%);
-    }
-
-    :root.dark .glassy-icon:before {
-        background: hsl(var(--color-white) / 0.4);
-    }
-
-    .glassy-icon:hover:before,
-    .glassy-icon:focus:before {    
-        -webkit-transform: skewX(45deg) translateX(-250%);    
-            -ms-transform: skewX(45deg) translateX(-250%);    
-                transform: skewX(45deg) translateX(-250%);
+        -webkit-font-smoothing: antialiased;
+        -webkit-transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+        transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
     }
 
     .glassy-icon:hover,
     .glassy-icon:focus {
-        background: hsl(var(--color-primBlue-1000));
-        -webkit-box-shadow: 0 0 4px 4px hsl(var(--color-primBlue-200) / 0.5);
-                box-shadow: 0 0 4px 4px hsl(var(--color-primBlue-200) / 0.5);
+        background: hsl(var(--color-neutGray-900));
+        border-color: hsl(var(--color-primBlue-500));
+        color: hsl(var(--color-primBlue-600));
+    }
+
+    :root.dark .glassy-icon {
+        background: hsl(var(--color-neutGray-900));
+        border-color: hsl(var(--color-neutGray-600));
+        color: hsl(var(--color-neutGray-100));
+    }
+
+    :root.dark .glassy-icon:hover,
+    :root.dark .glassy-icon:focus {
+        background: hsl(var(--color-neutGray-800));
+        border-color: hsl(var(--color-primBlue-400));
+        color: hsl(var(--color-primBlue-300));
     }
 
     .glassy-icon:active {
-        -webkit-box-shadow: 0 0 6px 6px hsl(var(--color-primBlue-200) / 0.8);
-                box-shadow: 0 0 6px 6px hsl(var(--color-primBlue-200) / 0.8);
+        background: hsl(var(--color-neutGray-800));
+    }
+
+    :root.dark .glassy-icon:active {
+        background: hsl(var(--color-neutGray-700));
     }
 
     .glassy-icon[disabled] {
-        box-shadow: inset 0 0 100px rgba(0,0,0,0.8);
+        opacity: 0.5;
         cursor: not-allowed;
     }
 
     input,
     textarea {
-        outline: 2px solid hsl(var(--color-neutGray-800));
-        background: -o-linear-gradient(343deg, hsl(var(--color-primBlue-200) / 0.05) 0%, hsl(var(--color-primBlue-200) / 0.1) 40%, hsl(var(--color-primBlue-200) / 0.05) 100%);
-        background: linear-gradient(107deg, hsl(var(--color-primBlue-200) / 0.05) 0%, hsl(var(--color-primBlue-200) / 0.1) 40%, hsl(var(--color-primBlue-200) / 0.05) 100%);
-        font-weight: 600;
-    }
-
-    input:focus,
-    textarea:focus {
         background: hsl(var(--color-neutGray-1050));
+        border: 1px solid hsl(var(--color-neutGray-600));
+        color: hsl(var(--color-neutGray-100));
+        font-weight: 500;
+        -webkit-transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
-    input:hover,
+    :root.dark input,
+    :root.dark textarea {
+        background: hsl(var(--color-neutGray-900));
+        border-color: hsl(var(--color-neutGray-600));
+        color: hsl(var(--color-neutGray-100));
+    }
+
     input:focus,
-    textarea:hover,
     textarea:focus {
-        outline: 2px solid hsl(var(--color-suppGreen-400));
-        -webkit-box-shadow: 0 0 4px 4px hsl(var(--color-primBlue-200) / 0.5);
-                box-shadow: 0 0 4px 4px hsl(var(--color-primBlue-200) / 0.5);
+        outline: none;
+        border-color: hsl(var(--color-primBlue-500));
+        box-shadow: 0 0 0 2px hsl(var(--color-primBlue-500) / 0.2);
     }
 
     .glassy-screen {
-        background: -o-linear-gradient(343deg, hsl(var(--color-primBlue-800) / 0.25) 0%, hsl(var(--color-primBlue-800) / 0.75) 40%, hsl(var(--color-primBlue-800) / 0.25) 100%);
-        background: linear-gradient(107deg, hsl(var(--color-primBlue-800) / 0.25) 0%, hsl(var(--color-primBlue-800) / 0.75) 40%, hsl(var(--color-primBlue-800) / 0.25) 100%);
-        color: hsl(var(--color-primBlue-100));
+        background: hsl(var(--color-neutGray-1000));
+        border: 1px solid hsl(var(--color-neutGray-700));
+        color: hsl(var(--color-neutGray-100));
         border-radius: 8px;
-        -webkit-backdrop-filter: blur(5px);
-                backdrop-filter: blur(5px);
     }
 
     :root.dark .glassy-screen {
-        background: -o-linear-gradient(343deg, hsl(var(--color-primBlue-1000) / 0.25) 0%, hsl(var(--color-primBlue-1000) / 0.75) 40%, hsl(var(--color-primBlue-1000) / 0.25) 100%);
-        background: linear-gradient(107deg, hsl(var(--color-primBlue-1000) / 0.25) 0%, hsl(var(--color-primBlue-1000) / 0.75) 40%, hsl(var(--color-primBlue-1000) / 0.25) 100%);
-        color: hsl(var(--color-primBlue-100));
+        background: hsl(var(--color-neutGray-900));
+        border-color: hsl(var(--color-neutGray-600));
+        color: hsl(var(--color-neutGray-100));
     }
 
     .monitor-view {
@@ -869,16 +687,13 @@
 
     .monitor-face {
         position: absolute;
-        border-width: theme('spacing.2');
-        border-style: solid;
-        border-image-source: linear-gradient(107deg, hsl(var(--color-primBlue-300) / 0.8) 0%, hsl(var(--color-primBlue-300) / 0.9) 40%, hsl(var(--color-primBlue-300) / 0.8) 100%);
-        border-image-slice: 1;
+        border: 1px solid hsl(var(--color-neutGray-600));
         -webkit-transform-style: preserve-3d;
-                transform-style: preserve-3d;
+        transform-style: preserve-3d;
     }
 
     :root.dark .monitor-face {
-        border-image-source: linear-gradient(107deg, hsl(var(--color-primBlue-100) / 0.7) 0%, hsl(var(--color-primBlue-100) / 0.9) 40%, hsl(var(--color-primBlue-100) / 0.7) 100%);
+        border-color: hsl(var(--color-neutGray-500));
     }
 
     .monitor-faceFront,
@@ -912,24 +727,12 @@
     .monitor-faceTop,
     .monitor-faceBottom,
     .ccarousel-front,
-    .ccarousel-right,  
-    .ccarousel-back,   
-    .ccarousel-left,   
-    .ccarousel-top,    
+    .ccarousel-right,
+    .ccarousel-back,
+    .ccarousel-left,
+    .ccarousel-top,
     .ccarousel-bottom {
-        background: -o-linear-gradient(343deg, hsl(var(--color-primBlue-800) / 0.2) 0%, hsl(var(--color-primBlue-800) / 0.5) 40%, hsl(var(--color-primBlue-800) / 0.2) 100%);
-        background: linear-gradient(107deg, hsl(var(--color-primBlue-800) / 0.2) 0%, hsl(var(--color-primBlue-800) / 0.5) 40%, hsl(var(--color-primBlue-800) / 0.2) 100%);
-        -webkit-box-shadow: 0px 0 1px 1px hsl(var(--color-primBlue-200) / 0.25);
-                box-shadow: 0px 0 1px 1px hsl(var(--color-primBlue-200) / 0.25);
-    }
-
-    .monitor-faceFront {
-        -webkit-transform: rotateY(  0deg) translateZ( 25px);
-                transform: rotateY(  0deg) translateZ( 25px);
-        -webkit-box-shadow: 0 0 16px 7px hsl(var(--color-primBlue-200) / 0.5);
-                box-shadow: 0 0 16px 7px hsl(var(--color-primBlue-200) / 0.5);
-        background: -o-linear-gradient(343deg, hsl(var(--color-primBlue-300) / 0.8) 0%, hsl(var(--color-primBlue-300) / 0.9) 40%, hsl(var(--color-primBlue-300) / 0.8) 100%);
-        background: linear-gradient(107deg, hsl(var(--color-primBlue-300) / 0.8) 0%, hsl(var(--color-primBlue-300) / 0.9) 40%, hsl(var(--color-primBlue-300) / 0.8) 100%);
+        background: hsl(var(--color-neutGray-1000));
     }
 
     :root.dark .monitor-faceFront,
@@ -939,18 +742,22 @@
     :root.dark .monitor-faceTop,
     :root.dark .monitor-faceBottom,
     :root.dark .ccarousel-front,
-    :root.dark .ccarousel-right,  
-    :root.dark .ccarousel-back,   
-    :root.dark .ccarousel-left,   
-    :root.dark .ccarousel-top,    
+    :root.dark .ccarousel-right,
+    :root.dark .ccarousel-back,
+    :root.dark .ccarousel-left,
+    :root.dark .ccarousel-top,
     :root.dark .ccarousel-bottom {
-        background: -o-linear-gradient(343deg, hsl(var(--color-primBlue-200) / 0.2) 0%, hsl(var(--color-primBlue-200) / 0.5) 40%, hsl(var(--color-primBlue-200) / 0.2) 100%);
-        background: linear-gradient(107deg, hsl(var(--color-primBlue-200) / 0.2) 0%, hsl(var(--color-primBlue-200) / 0.5) 40%, hsl(var(--color-primBlue-200) / 0.2) 100%);
+        background: hsl(var(--color-neutGray-800));
+    }
+
+    .monitor-faceFront {
+        -webkit-transform: rotateY(0deg) translateZ(25px);
+        transform: rotateY(0deg) translateZ(25px);
+        background: hsl(var(--color-neutGray-1050));
     }
 
     :root.dark .monitor-faceFront {
-        background: -o-linear-gradient(343deg, hsl(var(--color-primBlue-300) / 0.8) 0%, hsl(var(--color-primBlue-300) / 0.9) 40%, hsl(var(--color-primBlue-300) / 0.8) 100%);
-        background: linear-gradient(107deg, hsl(var(--color-primBlue-300) / 0.8) 0%, hsl(var(--color-primBlue-300) / 0.9) 40%, hsl(var(--color-primBlue-300) / 0.8) 100%);
+        background: hsl(var(--color-neutGray-900));
     }
 
     .monitor-faceBack   { 
@@ -1002,13 +809,13 @@
     
     .ccarousel-face {
         position: absolute;
-        border: 5px solid hsl(var(--color-primBlue-400));
+        border: 1px solid hsl(var(--color-neutGray-600));
         width: 200px;
         height: 200px;
     }
 
     :root.dark .ccarousel-face {
-        border: 5px solid hsl(var(--color-primBlue-200));
+        border-color: hsl(var(--color-neutGray-500));
     }
 
     .ccarousel-slide-0 {
@@ -1072,93 +879,59 @@
 
     .ccarousel-control[type="radio"] {
         -webkit-appearance: none;
-        -moz-appearance: none;
-             appearance: none;
-        background: -o-linear-gradient(28deg, hsl(var(--color-primBlue-200) / 0.07) 0%, hsl(var(--color-primBlue-200) / 0.15) 40%, hsl(var(--color-primBlue-200) / 0.07) 100%);
-        background: linear-gradient(62deg, hsl(var(--color-primBlue-200) / 0.07) 0%, hsl(var(--color-primBlue-200) / 0.15) 40%, hsl(var(--color-primBlue-200) / 0.07) 100%);
+        appearance: none;
         margin: 0;
         width: 20px;
         height: 20px;
-        border-width: 3px;
-        border-style: solid;
-        border-image-source: linear-gradient(62deg, hsl(var(--color-primBlue-100)) 0%, hsl(var(--color-primBlue-100) / 0.8) 40%, hsl(var(--color-primBlue-100) / 0.8) 100%);
-        border-image-slice: 1;
-        border-radius: 4px;
-        -webkit-backdrop-filter: blur(5px);
-                backdrop-filter: blur(5px);
-        -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-                transform: rotate(45deg);
-        display: -webkit-box;
-        display: -ms-flexbox;
+        border: 2px solid hsl(var(--color-neutGray-600));
+        border-radius: 50%;
+        background: hsl(var(--color-neutGray-1050));
+        transform: rotate(45deg);
         display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -webkit-box-shadow: inset 0 0 2px 2px hsl(var(--color-neutGray-1050) / 0.3);
-                box-shadow: inset 0 0 2px 2px hsl(var(--color-neutGray-1050) / 0.3);
+        justify-content: center;
+        align-items: center;
+        transition: border-color 0.2s ease, background 0.2s ease;
     }
 
     :root.dark .ccarousel-control[type="radio"] {
-        border-image-source: linear-gradient(62deg, hsl(var(--color-primBlue-100)) 0%, hsl(var(--color-primBlue-100) / 0.75) 40%, hsl(var(--color-primBlue-100) / 0.25) 100%);
+        background: hsl(var(--color-neutGray-900));
+        border-color: hsl(var(--color-neutGray-500));
     }
 
     .ccarousel-control[type="radio"]::before {
         content: "";
-        width: 10px;
-        height: 10px;
-        -webkit-transform: scale(0);
-            -ms-transform: scale(0);
-                transform: scale(0);
-        -webkit-transition: 150ms -webkit-transform linear;
-        transition: 150ms -webkit-transform linear;
-        -o-transition: 150ms transform linear;
-        transition: 150ms transform linear;
-        transition: 150ms transform linear, 150ms -webkit-transform linear;
-        background-color: hsl(var(--color-primBlue-100));
+        width: 8px;
+        height: 8px;
+        transform: scale(0);
+        transition: transform 150ms ease;
+        background-color: hsl(var(--color-primBlue-500));
+        border-radius: 50%;
     }
-      
+
+    :root.dark .ccarousel-control[type="radio"]::before {
+        background-color: hsl(var(--color-primBlue-400));
+    }
+
     .ccarousel-control[type="radio"]:checked::before {
-        -webkit-transform: scale(1);
-            -ms-transform: scale(1);
-                transform: scale(1);
-        -webkit-box-shadow: 0 0 8px 8px hsl(var(--color-suppBlue-300) / 0.75);
-                box-shadow: 0 0 8px 8px hsl(var(--color-suppBlue-300) / 0.75);
-    }
-      
-    :root.dark .ccarousel-control[type="radio"]:checked::before {
-        -webkit-box-shadow: 0 0 8px 8px hsl(var(--color-primBlue-200) / 0.5);
-                box-shadow: 0 0 8px 8px hsl(var(--color-primBlue-200) / 0.5);
+        transform: scale(1);
     }
 
     .ccarousel-control[type="radio"]:hover {
-        outline: 2px solid hsl(var(--color-suppGreen-400));
-        outline-offset: 3px;
-        -webkit-box-shadow: 0 0 8px 8px hsl(var(--color-primBlue-200) / 0.5);
-                box-shadow: 0 0 8px 8px hsl(var(--color-primBlue-200) / 0.5);
+        border-color: hsl(var(--color-primBlue-500));
     }
-      
+
     .ccarousel-control[type="radio"]:focus {
-        outline: 3px solid hsl(var(--color-primBlue-100));
-        outline-offset: 3px;
-        -webkit-box-shadow: 0 0 8px 8px hsl(var(--color-primBlue-200) / 0.5);
-                box-shadow: 0 0 8px 8px hsl(var(--color-primBlue-200) / 0.5);
+        outline: 2px solid hsl(var(--color-primBlue-500));
+        outline-offset: 2px;
     }
-      
+
     .profile-border {
-        border-width: theme('spacing.6');
-        border-style: solid;
-        border-image-source: linear-gradient(107deg, hsl(var(--color-primBlue-800) / 0.4) 0%, hsl(var(--color-primBlue-800) / 0.85) 40%, hsl(var(--color-primBlue-800) / 0.4) 100%);
-        border-image-slice: 1;
-        -webkit-backdrop-filter: blur(5px);
-                backdrop-filter: blur(5px);
+        border: 2px solid hsl(var(--color-neutGray-600));
+        border-radius: 4px;
     }
 
     :root.dark .profile-border {
-        border-image-source: linear-gradient(107deg, hsl(var(--color-primBlue-800) / 0.2) 0%, hsl(var(--color-primBlue-800) / 0.8) 40%, hsl(var(--color-primBlue-800) / 0.2) 100%);
+        border-color: hsl(var(--color-neutGray-500));
     }
 
     @media screen and (min-width: 400px) {
@@ -1411,12 +1184,6 @@
     }
 
     @media (prefers-reduced-motion) {
-        .glassy-icon:before {
-            -webkit-transition: none;
-            -o-transition: none;
-            transition: none;
-        }
-        
         .monitor-box {
             -webkit-transition: none;
             -o-transition: none;

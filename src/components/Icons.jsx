@@ -1,7 +1,7 @@
 /*
     File: Icons.jsx
-    Author: Ed Park
-    Copyright: 2023 - Ed Park https://edpark.space
+    Author: Viraj
+    Copyright: 2023 - Viraj https://edpark.space
     Version: 1.0
 */
 
@@ -14,7 +14,7 @@ export const LogoIcon = () => {
     // width="100" height="79.797"
     return (
         <svg className="h-12 md:h-13 lg:h-[136px]" version="1.1" viewBox="0 0 100 79.797" xmlns="http://www.w3.org/2000/svg">
-            <title>Ed Park Logo</title>
+            <title>Viraj Logo</title>
             <defs>
                 <filter id={logoFilterId} x="-.095017" y="-.12509" width="1.19" height="1.2502" colorInterpolationFilters="sRGB">
                     <feComposite in2="SourceGraphic" k2="1.38778e-16" operator="arithmetic" result="composite1" />
@@ -74,7 +74,7 @@ export const FaviconIcon = () => {
 
     return (
         <svg width="32" height="25.53504" version="1.1" viewBox="0 0 100 79.797" xmlns="http://www.w3.org/2000/svg">
-            <title>Ed Park Favicon</title>
+            <title>Viraj Favicon</title>
             <defs>
                 <filter id={faviconFilterId} x="-.095017" y="-.12509" width="1.19" height="1.2502" colorInterpolationFilters="sRGB">
                     <feComposite in2="SourceGraphic" k2="1.38778e-16" operator="arithmetic" result="composite1" />
@@ -274,6 +274,13 @@ export const TwitterIcon = () => (
     <svg className="w-iconMobile sm:w-iconSmall md:w-iconMedium lg:w-iconLarge" clipRule="evenodd" fillRule="evenodd" imageRendering="optimizeQuality" shapeRendering="geometricPrecision" textRendering="geometricPrecision" version="1.1" viewBox="0 0 500 406.16" xmlns="http://www.w3.org/2000/svg">
         <title>Twitter icon</title>
         <path d="m500 48.018c-18.381 8.2216-38.182 13.684-58.86 16.12 21.185-12.687 37.388-32.793 45.12-56.728-19.802 11.709-41.808 20.3-65.125 24.894-18.749-19.921-45.379-32.303-74.878-32.303-56.645 0-102.5 45.886-102.5 102.49 0 7.9903 0.8859 15.806 2.621 23.344-85.231-4.3186-160.79-45.121-211.37-107.2a102.67 102.67 0 0 0-13.878 51.561c0 35.543 18.048 66.98 45.582 85.315-16.802-0.49842-32.608-5.1857-46.487-12.78v1.2828c0 49.707 35.331 91.183 82.278 100.56-8.5997 2.3343-17.679 3.6264-27.035 3.6264-6.6248 0-13.01-0.68279-19.359-1.8359 13.111 40.709 50.961 70.384 95.787 71.251-35.146 27.534-79.288 43.93-127.41 43.93-8.3044 0-16.396-0.5078-24.479-1.4765 45.49 29.186 99.376 46.09 157.27 46.09 188.6 0 291.83-156.3 291.83-291.82 0-4.503-0.10156-8.8669-0.28593-13.278 20.032-14.33 37.397-32.415 51.146-53.001l0.0461-0.0461z" fill="hsl(var(--color-primBlue-100))" strokeWidth=".78122" />
+    </svg>
+);
+
+export const FreelancerIcon = () => (
+    <svg className="w-iconMobile sm:w-iconSmall md:w-iconMedium lg:w-iconLarge" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <title>Freelancer profile</title>
+        <path fill="hsl(var(--color-primBlue-100))" d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6 0h-4V4h4v2z" />
     </svg>
 );
 

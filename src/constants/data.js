@@ -1,7 +1,7 @@
 /*
     File: data.js
-    Author: Ed Park
-    Copyright: 2023 - Ed Park https://edpark.space
+    Author: Viraj
+    Copyright: 2023 - Viraj https://edpark.space
     Version: 1.0
 */
 
@@ -28,153 +28,80 @@ export const navMenu = [
 
 export const projects = [
     {
-        title: 'MindFit Mental Health',
-        src: '/assets/images/projects/mindfit.webp',
-        altText: 'Screenshot of MindFit home page',
-        ariaLabel: "Opens modal window with more information about the MindFit Mental Health web project",
+        title: 'Airport Rentals',
+        src: '/assets/images/projects/airport-rentals.png',
+        altText: 'Screenshot of Airport Rental home page',
+        ariaLabel: "Opens modal window with more information about Airport Rental",
         details: {
-            description: "MindFit Mental Health is located in East Rochester, New York. They provide strength-based individual and group mental health counseling services. They use cutting edge technology to help young people learn and practice skills in self-regulation, mindfulness, and positive thinking.",
+            description: "Airport Rentals is an Australian-based car rental comparison and booking platform. It is designed to simplify the booking process by aggregating options and allowing users to compare prices to find the best deal.",
             technologies: [
-                {
-                    title: 'HTML',
-                    Icon: Icons.HtmlIcon,
-                },
-                {
-                    title: 'CSS',
-                    Icon: Icons.CSSIcon,
-                },
-                {
-                    title: 'JavaScript',
-                    Icon: Icons.JavascriptIcon,
-                },
-                {
-                    title: 'WordPress',
-                    Icon: Icons.WordPressIcon,
-
-                },
-                {
-                    title: 'PHP',
-                    Icon: Icons.PHPIcon,
-                },
-                {
-                    title: 'BackEnd',
-                    Icon: Icons.DatabaseIcon,
-                },
-                {
-                    title: 'jQuery',
-                    Icon: Icons.JQueryIcon,
-                },
-                {
-                    title: 'API',
-                    Icon: Icons.APIIcon,
-                },
+                { title: 'React' },
+                { title: 'JavaScript' },
+                { title: 'MongoDB' },
+                { title: 'jQuery' },
+                { title: 'API' },
             ],
-            url: 'https://mindfitmentalhealth.com/',
+            url: 'https://www.airportrentals.com.au',
             githubUrl: null,
         },
     },
     {
-        title: 'ThreeSeeds Organization',
-        src: '/assets/images/projects/threeseeds.webp',
-        altText: 'Screenshot of ThreeSeeds home page',
-        ariaLabel: "Opens modal window with more information about the ThreeSeeds web project",
+        title: 'TheirCare',
+        src: '/assets/images/projects/their-care.png',
+        altText: 'Screenshot of TheirCare home page',
+        ariaLabel: "Opens modal window with more information about the ThereCare",
         details: {
-            description: "ThreeSeeds is a non-profit organization located in California. Their mission is to provide educational, employment, and entrepreneurial opportunities that build self-esteem and empowers one to become self-sufficient.",
+            description: "TheirCare provides a stimulating and safe environment for all children and young people, an environment where children come and enjoy their time in their program.",
             technologies: [
-                {
-                    title: 'HTML',
-                    Icon: Icons.HtmlIcon,
-                },
-                {
-                    title: 'CSS',
-                    Icon: Icons.CSSIcon,
-                },
-                {
-                    title: 'JavaScript',
-                    Icon: Icons.JavascriptIcon,
-                },
-                {
-                    title: 'WordPress',
-                    Icon: Icons.WordPressIcon,
-                },
-                {
-                    title: 'PHP',
-                    Icon: Icons.PHPIcon,
-                },
-                {
-                    title: 'BackEnd',
-                    Icon: Icons.DatabaseIcon,
-                },
+                { title: 'WordPress' },
+                { title: 'PHP' },
+                { title: 'mySQL' },
+                { title: 'jQuery' }
             ],
-            url: 'https://www.threeseeds.org/',
+            url: 'https://theircare.com.au',
             githubUrl: null,
         },
     },
     {
-        title: 'Blended Concoctions',
-        src: '/assets/images/projects/blended-concoctions.webp',
-        altText: 'Screenshot of Blended Concoctions home page',
-        ariaLabel: "Opens modal window with more information about the Blended Concoctions web project",
+        title: 'Frank Green',
+        src: '/assets/images/projects/frank-green.png',
+        altText: 'Screenshot of FrankGreen home page',
+        ariaLabel: "Opens modal window with more information about the FrankGreen",
         details: {
-            description: "A coffee shop website designed using vanilla HTML, CSS, JavaScript, and a hint of jQuery.",
+            description: "Frank Green is an Australian brand redefining reusable essentials with sleek design, premium materials and sustainability at its core.",
             technologies: [
-                {
-                    title: 'HTML',
-                    Icon: Icons.HtmlIcon,
-                },
-                {
-                    title: 'CSS',
-                    Icon: Icons.CSSIcon,
-                },
-                {
-                    title: 'JavaScript',
-                    Icon: Icons.JavascriptIcon,
-                },
-                {
-                    title: 'jQuery',
-                    Icon: Icons.JQueryIcon,
-                },
+                { title: 'Shopify' },
+                { title: 'React' },
+                { title: 'Bootstrap' },
+                { title: 'jQuery' },
+                { title: 'PostgreSQL' },
             ],
-            url: "https://blended-concoctions.netlify.app/",
-            githubUrl: "https://github.com/edwardpark1/coffee-shop",
+            url: "https://frankgreen.com.au",
+            githubUrl: null,
         },
     },
 ]
 
-export const testimonials = [
-    {
-        quote: "I am incredibly grateful for Edward's remarkable efforts of completely revamping our nonprofit's website. His dedication and expertise in enhancing the site's security measures while also ensuring a seamless user experience has been nothing short of exceptional. The new website not only boasts a robust security infrastructure that safeguards sensitive data, but it also welcomes visitors with an intuitive and user-friendly interface. Edward took our organization's mission to heart and translated it into an online platform that not only represents our values but also engages our audience effectively. His selfless commitment to improving our online presence has undoubtedly elevated our nonprofit's reach and impact. We owe him a debt of gratitude for his invaluable contribution in making our website a secure and inviting space for all.",
-        name: 'Alicia P.',
-        title: 'Executive Director of Three Seeds Organization',
-        src: '/assets/images/testimonials/alicia.webp',
-        altText: 'Profile of Alicia P.',
-    }
-]
+const VECTORLOGO = 'https://www.vectorlogo.zone/logos';
 
 export const socialMedias = [
     {
-        href: 'mailto:edpark@edpark.space',
-        ariaLabel: 'Compose an email to Ed Park',
-        title: 'Write an Email to Ed Park',
+        href: 'mailto:virakar99@gmail.com',
+        ariaLabel: 'Compose an email',
+        title: 'Email',
         Icon: Icons.EmailIcon,
     },
     {
-        href: 'https://www.linkedin.com/in/edpark1',
-        ariaLabel: 'Goes to Ed Park&apos;s LinkedIn profile',
-        title: 'LinkedIn Profile',
-        Icon: Icons.LinkedInIcon,
+        href: 'https://github.com/virakar99',
+        ariaLabel: 'GitHub profile',
+        title: 'GitHub',
+        iconUrl: `${VECTORLOGO}/github/github-icon.svg`,
     },
     {
-        href: 'https://github.com/edwardpark1',
-        ariaLabel: 'Goes to Ed Park&apos;s GitHub profile',
-        title: 'GitHub Profile',
-        Icon: Icons.GitHubIcon,
-    },
-    {
-        href: 'https://twitter.com/edward_park1',
-        ariaLabel: 'Goes to Ed Park&apos;s Twitter profile',
-        title: 'Twitter Profile',
-        Icon: Icons.TwitterIcon,
+        href: 'https://www.freelancer.com/u/virakar99',
+        ariaLabel: 'Freelancer profile',
+        title: 'Freelancer',
+        iconUrl: `${VECTORLOGO}/freelancer/freelancer-icon.svg`,
     },
 ];
 
@@ -182,157 +109,60 @@ export const techSkills = [
     {
         category: 'Front-End Development',
         skills: [
-            {
-                title: 'HTML',
-                Icon: Icons.HtmlIcon,
-            },
-            {
-                title: 'CSS',
-                Icon: Icons.CSSIcon,
-            },
-            {
-                title: 'Tailwind CSS',
-                Icon: Icons.TailwindCSSIcon,
-            },
-            {
-                title: 'SASS, SCSS',
-                Icon: Icons.SassIcon,
-            },
-            {
-                title: 'JavaScript',
-                Icon: Icons.JavascriptIcon,
-            },
-            {
-                title: 'React',
-                Icon: Icons.ReactIcon,
-            },
-            {
-                title: 'jQuery',
-                Icon: Icons.JQueryIcon,
-            },
+            { title: 'HTML' },
+            { title: 'CSS' },
+            { title: 'Tailwind' },
+            { title: 'SASS' },
+            { title: 'JavaScript' },
+            { title: 'React' },
+            { title: 'jQuery' },
         ],
     },
     {
         category: 'Back-End Development',
         skills: [
-            {
-                title: 'PHP',
-                Icon: Icons.PHPIcon,
-            },
-            {
-                title: 'NodeJS',
-                Icon: Icons.NodeJSIcon,
-            },
-            {
-                title: 'ExpressJS',
-                Icon: Icons.ExpressJSIcon,
-            },
-            {
-                title: 'SQL Server',
-                Icon: Icons.SqlServerIcon,
-            },
-            {
-                title: 'MongoDB',
-                Icon: Icons.MongoDBIcon,
-            },
-            {
-                title: 'SSRS',
-                Icon: Icons.SsrsIcon,
-            },
+            { title: 'PHP' },
+            { title: 'NodeJS' },
+            { title: 'Express' },
+            { title: 'PostgreSQL' },
+            { title: 'MongoDB' },
         ],
     },
     {
         category: 'Programming Languages',
         skills: [
-            {
-                title: 'C#',
-                Icon: Icons.CsharpIcon,
-            },
-            {
-                title: 'VBA',
-                Icon: Icons.VBIcon,
-            },
+            { title: 'TypeScript' },
+            { title: 'Python' },
+            { title: 'C++' },
         ],
     },
     {
         category: 'Content Management Systems',
         skills: [
-            {
-                title: 'WordPress',
-                Icon: Icons.WordPressIcon,
-            },
-            {
-                title: 'Wix',
-                Icon: Icons.WixIcon,
-            },
+            { title: 'WordPress' },
         ],
     },
     {
-        category: 'Build Tools, Frameworks, and Versioning',
+        category: 'Build Tools & Versioning',
         skills: [
-            {
-                title: 'Vite',
-                Icon: Icons.ViteIcon,
-            },
-            {
-                title: 'Git',
-                Icon: Icons.GitIcon,
-            },
-            {
-                title: 'GitHub',
-                Icon: Icons.GitHubIcon,
-            },
+            { title: 'Vite' },
+            { title: 'Git' },
+            { title: 'GitHub' },
         ],
     },
     {
-        category: 'Design and Prototyping',
+        category: 'Design & Prototyping',
         skills: [
-            {
-                title: 'Responsive Design',
-                Icon: Icons.ResponsiveDesignIcon,
-            },
-            {
-                title: 'Pen and Paper',
-                Icon: Icons.SketchingIcon,
-            },
-            {
-                title: 'Figma',
-                Icon: Icons.FigmaIcon,
-            },
-        ],
-    },
-    {
-        category: 'Microsoft Products',
-        skills: [
-            {
-                title: 'Sharepoint',
-                Icon: Icons.SharepointIcon,
-            },
-            {
-                title: 'Excel',
-                Icon: Icons.ExcelIcon,
-            },
-            {
-                title: 'Access',
-                Icon: Icons.AccessIcon,
-            },
+            { title: 'Figma' },
         ],
     },
     {
         category: 'Others',
         skills: [
-            {
-                title: 'APIs',
-                Icon: Icons.APIIcon,
-            },
-            {
-                title: 'REST APIs',
-                Icon: Icons.RestAPIIcon,
-            },
-            {
-                title: 'LocalWP',
-                Icon: Icons.LocalWP,
-            },
+            { title: 'API' },
+            { title: 'GraphQL' },
+            { title: 'Docker' },
+            { title: 'Linux' },
         ],
     },
 ];
@@ -358,98 +188,71 @@ export const softSkills = [
 
 export const workExp = [
     {
-        company: 'Ed Park',
-        location: 'Rochester, NY',
+        company: 'Lingopal AI',
+        location: 'US',
         positions: [
             {
-                title: 'Freelancing Full-Stack Software Engineer',
-                startDate: new Date(2023, 1),
-                endDate: 'present',
+                title: 'AI Integration Engineer',
+                startDate: new Date(2024, 8),
+                endDate: new Date(2025, 7),
             },
         ],
         tasks: [
-            "Collaborate directly with clients to gather project requirements, provide regular updates, and deliver solutions that tailored to their specific needs",
-            "Conduct competitor analysis to identify clients' opportunities for differentiation and growth",
-            "Setup API calls and database structures for streamlining clients' business requirements",
-            "Demonstrate expertise in designing custom WordPress themes and plugins in PHP, enhancing website functionality and user interactivity",
+            "Engineered multilingual real-time speech-to-speech translation features using OpenAI and voice cloning AI platforms.",
+            "Integrated third-party voice APIs and custom pipelines to support low-latency, natural-sounding output across multiple languages.",
+            "Collaborated with product and design teams to define requirements and iterate on user experience for real-time translation flows.",
+            "Documented integration patterns and contributed to internal standards for AI feature development.",
         ],
     },
     {
-        company: '100Devs',
+        company: 'Off-Platform',
         location: 'Remote',
         positions: [
             {
-                title: 'Full-Stack Software Engineer',
-                startDate: new Date(2022, 3),
-                endDate: new Date(2023, 0),
+                title: 'Freelancer (SaaS Development Specialist)',
+                startDate: new Date(2022, 1),
+                endDate: new Date(2024, 8),
             },
         ],
         tasks: [
-            "Designed semantically structured and responsive websites for mobile and desktop devices",
-            "Collaborated with a team of developers to construct full-stack web applications",
-            "Utilized agile methodologies such as SCRUM for project management",
+            "Worked with early-stage startups and solo founders globally to build MVPs, internal tools, and scalable AI SaaS platforms.",
+            "Delivered full-stack web applications using React, Node.js, and cloud services, from concept through deployment and maintenance.",
+            "Implemented authentication, billing, and analytics features to support product growth and user retention.",
+            "Provided technical guidance and architecture decisions to help clients prioritize features and manage technical debt.",
         ],
     },
     {
-        company: 'Xerox Corporation',
-        location: 'Webster, NY',
+        company: 'Artrya',
+        location: 'Australia',
         positions: [
             {
-                title: 'Global Equipment Systems Engineer',
-                startDate: new Date(2015, 9),
-                endDate: new Date(2022, 2),
+                title: 'Full Stack Engineer',
+                startDate: new Date(2021, 3),
+                endDate: new Date(2022, 1),
             },
         ],
         tasks: [
-            "Developed device customization processes for Fortune 500 clients and government accounts",
-            "Ranked number one in my department on process quality and defects testing by standardizing automation and fail-safes",
-            "Provided technical support for remote production sites to facilitate the completion of device configurations",
-            "Collaborated with a small team to improve processes",
-            "Designed C# and .NET desktop application solutions to support engineers",
-            "Successfully completed project of revamping Extract-Transform-Load system that led to 95% improved efficiency in terms of execution time, and incorporated troubleshooting features",
-            "Designed and managed secure SharePoint websites for clients",
-            "Wrote ad-hoc SQL queries for statistical analysis",
-            "Wrote macros in Excel to populate customer data on printer labels",
-        ],
-    },
-];
-
-export const extracurriculars = [
-    {
-        company: 'Toastmasters International Organization',
-        location: 'Pittsford, NY',
-        positions: [
-            {
-                title: 'Vice President of Public Relations',
-                startDate: new Date(2023, 6),
-                endDate: 'present',
-            },
-            {
-                title: 'Sergeant at Arms',
-                startDate: new Date(2022, 4),
-                endDate: new Date(2023, 6),
-            },
-        ],
-        tasks: [
-            "Develop strategies to promote the club to the community, potential members, and guests",
-            "Manage the club's social media accounts and website to share club events, achievements, and information",
-            "Create content that showcases the club's activities and benefits",
+            "Developed secure AI-powered diagnostic SaaS tools for the healthcare industry, contributing to clinical-grade software.",
+            "Built and maintained backend services and APIs that handled sensitive medical data with strict compliance and audit requirements.",
+            "Worked in an agile team to ship features on schedule and support clinicians with reliable, performant tooling.",
+            "Participated in code reviews, testing, and documentation to ensure quality and long-term maintainability.",
         ],
     },
     {
-        company: 'Literacy Rochester',
-        location: 'East Rochester, NY',
+        company: 'Dovetail',
+        location: 'Australia',
         positions: [
             {
-                title: 'Digital Volunteer',
-                startDate: new Date(2022, 3),
-                endDate: new Date(2023, 9),
+                title: 'Web Developer',
+                startDate: new Date(2019, 10),
+                endDate: new Date(2021, 2),
             },
         ],
         tasks: [
-            "Diagnose and troubleshoot technical problems",
-            "Demonstrate strong communication skills by explaining technical concepts in a clear and understandable manner",
-            "Recognized for outstanding problem-solving capabilities",
+            "Built dynamic frontend features and internal tools, and improved product usability as the company scaled toward its first funding round.",
+            "Implemented responsive UI components and workflows that increased efficiency for research and customer insight teams.",
+            "Integrated with existing design systems and contributed to shared component libraries used across the product.",
+            "Collaborated with designers and product managers to refine UX and prioritize technical improvements.",
         ],
     },
 ];
@@ -457,10 +260,10 @@ export const extracurriculars = [
 export const educations = [
     {
         degree: 'B.S. Computer Engineering',
-        school: 'University at Buffalo, The State University of New York',
-        startDate: new Date(2011, 10),
-        endDate: new Date(2015, 4),
-        location: 'Buffalo, NY',
+        school: 'University of Western Sydney',
+        startDate: new Date(2017, 3),
+        endDate: new Date(2019, 9),
+        location: 'NSW, Australia',
     },
 ];
 

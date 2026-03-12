@@ -1,15 +1,10 @@
 /*
     File: ContactForm.jsx
-    Author: Ed Park
-    Copyright: 2023 - Ed Park https://edpark.space
+    Author: Viraj
+    Copyright: 2023 - Viraj https://edpark.space
     Version: 1.0
 */
 
-import {
-    Turnstile,
-} from "@marsidev/react-turnstile";
-
-const turnstileSiteKey = '0x4AAAAAAAKS1VVfqS6oXPTm';
 const useBasinFormId = '6ef567b5be7c';
 
 export default function ContactForm() {
@@ -28,9 +23,10 @@ export default function ContactForm() {
                         type="text"
                         id="contact-name"
                         name="contact-name"
-                        className="mt-3 px-5 py-4 bg-transparent border-2 border-solid border-neutGray-500 rounded-[5px] max-w-[30em] w-[100%] backdrop-blur-[5px]"
+                        className="mt-3 px-5 py-4 border rounded-[5px] max-w-[30em] w-[100%]"
                         placeholder="Name"
-                        required />
+                        required
+                    />
                 </label>
 
                 <label className="max-w-[30em] w-[100%]">
@@ -39,12 +35,13 @@ export default function ContactForm() {
                         type="email"
                         id="contact-email"
                         name="contact-email"
-                        className="mt-3 px-5 py-4 bg-transparent border-2 border-solid border-neutGray-500 rounded-[5px] max-w-[30em] w-[100%] backdrop-blur-[5px]"
+                        className="mt-3 px-5 py-4 border rounded-[5px] max-w-[30em] w-[100%]"
                         placeholder="Email"
-                        required />
+                        required
+                    />
                 </label>
 
-                <input type="hidden" name="_gotcha"></input>
+                <input type="hidden" name="_gotcha" />
 
                 <label className="max-w-[30em] w-[100%]">
                     Message *
@@ -52,19 +49,15 @@ export default function ContactForm() {
                         id="contact-message"
                         name="contact-message"
                         rows="4"
-                        className="mt-3 px-5 py-4 bg-transparent border-2 border-solid border-neutGray-500 rounded-[5px] max-w-[30em] w-[100%] backdrop-blur-[5px]"
+                        className="mt-3 px-5 py-4 border rounded-[5px] max-w-[30em] w-[100%]"
                         placeholder="Your message here..."
                         required
                     />
                 </label>
 
-                <Turnstile
-                    siteKey={turnstileSiteKey}
-                />
-
-                <button
-                    type="submit"
-                    className="mt-8 glassy-icon px-6">Submit Message</button>
+                <button type="submit" className="mt-8 glassy-icon px-6">
+                    Submit Message
+                </button>
             </form>
         </>
     );

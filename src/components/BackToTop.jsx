@@ -1,7 +1,7 @@
 /*
     File: BackToTop.jsx
-    Author: Ed Park
-    Copyright: 2023 - Ed Park https://edpark.space
+    Author: Viraj
+    Copyright: 2023 - Viraj https://edpark.space
     Version: 1.0
 */
 

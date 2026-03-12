@@ -1,15 +1,14 @@
 /*
     File: ProjectModal.jsx
-    Author: Ed Park
-    Copyright: 2023 - Ed Park https://edpark.space
+    Author: Viraj
+    Copyright: 2023 - Viraj https://edpark.space
     Version: 1.0
 */
 
 import { useState, useEffect, useRef } from "react";
 import PropTypes from 'prop-types';
-import {
-    CloseIcon,
-} from "./Icons";
+import { CloseIcon } from "./Icons";
+import SkillIcon from "./SkillIcon";
 
 ProjectModal.propTypes = {
     projectId: PropTypes.string.isRequired,
@@ -91,7 +90,7 @@ export default function ProjectModal({ projectId, projectData, }) {
             </div>
             <dialog
                 id={projectModalId.current}
-                className="collapsible-container z-10 m-0 translate-x-[600px] transition-[transform] pointer-events-none [&[open]]:translate-x-0 [&[open]]:pointer-events-auto duration-500 flex flex-col flex-nowrap gap-8 items-center fixed top-0 bottom-0 left-auto right-0 max-w-[600px] w-[100%] max-h-[100%] h-[100vh] bg-neutGray-900 dark:bg-neutGray-1050 text-primBlue-200 backdrop:bg-neutGray-100/70"
+                className="collapsible-container z-10 m-0 translate-x-[600px] transition-[transform] pointer-events-none [&[open]]:translate-x-0 [&[open]]:pointer-events-auto duration-500 flex flex-col flex-nowrap gap-8 items-center fixed top-0 bottom-0 left-auto right-0 max-w-[600px] w-[100%] max-h-[100%] h-[100vh] bg-neutGray-1000 dark:bg-neutGray-1050 text-neutGray-100 backdrop:bg-neutGray-100/70"
                 onClick={closeOnBackdrop}
                 aria-hidden="true"
             >
@@ -105,7 +104,7 @@ export default function ProjectModal({ projectId, projectData, }) {
                         <CloseIcon />
                     </button>
                     <h4 className="text-center font-extrabold ml-auto mr-auto">{projectData.title}</h4>
-                    <img className="border-2 border-primBlue-200 w-[100%] object-cover object-top max-h-[350px] ml-auto mr-auto" src={projectData.src} alt={projectData.altText} />
+                    <img className="border border-neutGray-600 w-[100%] object-cover object-top max-h-[350px] ml-auto mr-auto rounded" src={projectData.src} alt={projectData.altText} />
                     {projectData.details.description !== null && (
                         <>
                             <h5 className="text-center ml-auto mr-auto">About</h5>
@@ -113,17 +112,16 @@ export default function ProjectModal({ projectId, projectData, }) {
                         </>
                     )}
                     <h5 className="text-center ml-auto mr-auto">Technologies</h5>
-                    <ul className="w-[100%] grid grid-cols-[repeat(auto-fit,minmax(80px,1fr))] md:grid-cols-[repeat(auto-fit,minmax(90px,1fr))] lg:grid-cols-[repeat(auto-fit,minmax(110px,1fr))] justify-items-center items-start justify-center gap-6">
+                    <ul className="w-[100%] grid grid-cols-[repeat(auto-fit,minmax(80px,1fr))] justify-items-center items-start gap-6">
                         {projectData.details.technologies.map((technology, id) => (
-                            <li key={id} className="h-[100%] flex flex-col flex-nowrap items-center gap-5 justify-center">
-                                <technology.Icon />
-                                <span className="text-center hyphens-auto">{technology.title}</span>
+                            <li key={id} className="flex flex-col flex-nowrap items-center justify-center">
+                                <SkillIcon title={technology.title} showLink={true} className="text-7" />
                             </li>
                         ))}
                     </ul>
                     <div className="flex flex-row flex-wrap gap-7 items-center justify-center">
                         {projectData.details.url !== null && (
-                            <a href={projectData.details.url} className="glassy-icon px-6 shrink-0">Visit Website</a>
+                            <a href={projectData.details.url} target="_blank" rel="noopener noreferrer" className="glassy-icon px-6 shrink-0">Visit Website</a>
                         )}
                         {projectData.details.githubUrl !== null && (
                             <a href={projectData.details.githubUrl} className="glassy-icon px-6 shrink-0">Visit GitHub Project</a>
