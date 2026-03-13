@@ -205,20 +205,20 @@ export const workExp = [
         ],
     },
     {
-        company: 'Off-Platform',
-        location: 'Remote',
+        company: 'OziShield',
+        location: 'Sydney, Australia (Remote)',
         positions: [
             {
-                title: 'Freelancer (SaaS Development Specialist)',
-                startDate: new Date(2022, 1),
+                title: 'SaaS Development Specialist (AI Trust & Safety)',
+                startDate: new Date(2024, 0), // Adjust dates as needed
                 endDate: new Date(2024, 8),
             },
         ],
         tasks: [
-            "Worked with early-stage startups and solo founders globally to build MVPs, internal tools, and scalable AI SaaS platforms.",
-            "Delivered full-stack web applications using React, Node.js, and cloud services, from concept through deployment and maintenance.",
-            "Implemented authentication, billing, and analytics features to support product growth and user retention.",
-            "Provided technical guidance and architecture decisions to help clients prioritize features and manage technical debt.",
+            "Architected and implemented the core message analysis logic to identify phishing patterns and fraudulent intent in SMS and emails.",
+            "Developed on-device text processing features using OCR and AI to ensure high-speed scam detection while maintaining user privacy.",
+            "Built the full-stack web interface with React and Node.js, focusing on a seamless user experience for scanning suspicious links and screenshots.",
+            "Integrated global threat intelligence databases to provide real-time domain reputation checks and typosquatting protection.",
         ],
     },
     {

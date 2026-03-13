@@ -11,7 +11,7 @@ import Projects from "../components/Projects";
 import SplashSection from "../components/SplashSection";
 import ContactForm from "../components/ContactForm";
 
-const HERO_TITLE = 'Full Stack Developer & AI Enthusiast';
+const HERO_TITLE = 'Full Stack | Desktop App Developer & AI Enthusiast';
 
 export default function Home() {
     const [isDarkMode] = useOutletContext();
